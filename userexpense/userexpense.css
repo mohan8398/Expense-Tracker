@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'quicksand', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 1rem;
+}
+
+.table-section {
+    
+    margin-top: 10px;
+}
+
+#table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table-rows {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.items {
+    padding: 15px 35px;
+    font-size: 19px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.7); */
+}
+
+
+.dec {
+    fill: rgba(239, 49, 49, 0.56);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.table-rows:nth-child(even) {
+    /* background-color: #E69A8DFF; */
+
+    /* background-color: #FC766AFF; */
+    background-color: lightyellow;
+    /* background-color: rgba(95, 197, 208, 0.21); */
+}
+
+.table-rows:nth-child(odd) {
+   /* background-color: #5F4B8BFF; */
+    /* background-color: #5B84B1FF; */
+    background-color:lightgray ;
+    /* background-color: rgba(55, 131, 138, 0.17); */
+}
+
+.header-row {
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    color: white;
+}
+
+.table-rows:hover {
+    background-color: lightpink;
+    /* background-color: #652479; */
+    transform: scale(1.1);
+}
+
+.download-btn {
+    
+    width: 170px;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-top: 30px;
+    background-color: lightcoral;
+    /* background-color: #D3D0CBFF; */
+    /* background: linear-gradient(to right, #ff105f, #ffad06); */
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    /* font-weight: italic; */
+    /* font-style: italic; */
+    font-size: 20px;
+}
+
+.download-btn:hover{
+    /* background-color:coral; */
+    background: linear-gradient(to right, #ff105f, #ffad06);
+     color: white;
+}
+
+.pagination {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.pagination span {
+    text-decoration: none;
+    color: #00695c;
+    padding: 0.5rem;
+    border: 1px solid #00695c;
+    margin: 0 1rem;
+}
+
+.pagination span:hover,
+.pagination span:active,
+.pagination span.active {
+    background: #00695c;
+    color: white;
+}
+
+.select-pages{
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+select {
+    border: #652479 solid;
+    background-color: #eff2f5;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 0.2rem;
+    color: #000;
+}
+
+option{
+    color: #000;
+}
+
+.select-pages button{
+    background: transparent;
+    color: #000;
+    margin-left: 5px;
+    padding: 0.3rem;
+    box-shadow: none;
+    border-radius: 10px;
+    border: 2px solid #080a0c;
+    transition: all 0.3s ease-in;
+}
+
+.select-pages button:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+}
