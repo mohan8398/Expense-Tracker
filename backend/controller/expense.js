@@ -8,3 +8,18 @@ const addexpense = (req, res) => {
         return res.status(403).json({success : false, error: err})
     })
 }
+
+const getexpenses = (req, res)=> {
+
+    req.user.getExpenses().then(expenses => {
+        return res.status(200).json({expenses, success: true})
+    })
+    .catch(err => {
+        return res.status(402).json({ error: err, success: false})
+    })
+}
+
+module.exports = {
+    getexpenses,
+    addexpense
+}
