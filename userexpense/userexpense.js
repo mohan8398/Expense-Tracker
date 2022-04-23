@@ -1,6 +1,5 @@
 window.addEventListener('load', () => {
-    pagination(1);
-    // getParticularUserExpenses();
+    pagination(1, 10);
     getExpenseFiles();
 })
 
@@ -87,8 +86,10 @@ async function getParticularUserExpenses(res) {
 
 async function pagination(page) {
     const token = localStorage.getItem('authToken');
+    const limit = localStorage.getItem('pagelimit');
+    console.log('limit from local storage >> ', limit)
     const res = await axios.get(`http://localhost:3000/getParticularUserExpenses?page=${page}&limit=${limit}`, { headers: { "Authorization": token } });
-   
+    console.log('pagination res >>> ', res);
     getParticularUserExpenses(res);
 }
 
@@ -147,4 +148,4 @@ function getDialogValue() {
     pagination(1);
 
 }
-© 2022 GitH
+
