@@ -18,4 +18,8 @@ router.get('/getexpenses', authenticatemiddleware.authenticate, expenseControlle
 
 router.get('/download', authenticatemiddleware.authenticate, expenseController.downloadExpenses)
 
+routes.get('/getUserExpenses', authenticatemiddleware.authenticate,  userController.getUserExpenses);
+
+routes.get('/getParticularUserExpenses/', authenticatemiddleware.authenticate, userexpenseController.getParticularUserExpenses);
+
 module.exports = router;
