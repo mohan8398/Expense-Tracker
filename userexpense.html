@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="userexpense.css">
+  <script src="userexpense.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" ></script>
+  <title>Your Expense</title>
+</head>
+
+<body>
+  <h2>Your Expenses</h2>
+  <div class="table-section" >
+    <div class="select-pages">
+      <h3>No of table rows per page?</h3>
+      <select name="page" id="page">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+      </select>
+      <button id="get" onclick="getDialogValue()">Get Expenses</button>
+    </div>
+    <table id="table">
+     
+    </table>
+    <section id="pagination">
+
+    </section>
+  </div>
+  <button id="download-btn" type="button" class="download-btn" onclick="verifyPremium()">Download</button>
+  <ul id="file-list" class="list" style="margin-top: 50px;">
+    <!-- <li class="minus" style="margin-left: 10px;"><a href="">Cash</a><span>-$400</span></li> -->
+  </ul>
+</body>
+
+</html>
