@@ -1,3 +1,4 @@
+const token = localStorage.getItem('token');
 function addNewExpense(e){
     e.preventDefault();
     const form = new FormData(e.target);
@@ -8,7 +9,7 @@ function addNewExpense(e){
         category: form.get("category")
 
     }
-    const token = localStorage.getItem('token');
+
     console.log(expenseDetails)
     axios.post('http://localhost:3000/user/addexpense',expenseDetails, { headers: {"Authorization" : token} }).then((response) => {
 
