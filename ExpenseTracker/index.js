@@ -70,6 +70,25 @@ function removeExpensefromUI(expenseid){
     document.getElementById(expenseElemId).remove();
 }
 
+function download(){
+    axios.get('http://localhost:3000/user/download', { headers: {"Authorization" : token} })
+    .then((response) => {
+        if(response.status === 201){
+            //the bcakend is essentially sending a download link
+            //  which if we open in browser, the file would download
+            var a = document.createElement("a");
+            a.href = response.data.fileUrl;
+            a.download = 'myexpense.csv';
+            a.click();
+        } else {
+            throw new Error(response.data.message)
+        }
+
+    })
+    .catch((err) => {
+        showError(err)
+    });
+}
 
 
 document.getElementById('rzp-button1').onclick = async function (e) {
