@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "\"Expense Tracker backend\"",
   "main": "app.js",
-  "author": "Yash",
+  "author": "mohan",
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
